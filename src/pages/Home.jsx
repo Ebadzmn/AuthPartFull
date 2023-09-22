@@ -242,6 +242,8 @@ if(getRole() === 'admin'){
 
             <button onClick={logout}>Logout</button>
             <button onClick={() => navigate("/post")}>Create Post</button>
+            <button onClick={() => navigate("/task")}>Task</button>
+
 
         </div>
     );

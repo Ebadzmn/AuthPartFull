@@ -158,7 +158,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {getToken,setToken,getRole,setRole,setsEmail} from "../helper/Token.jsx";
+import {getToken,setToken,getRole,setRole,setsEmail,setsId} from "../helper/Token.jsx";
 
 import { useNavigate } from 'react-router-dom';
 
@@ -206,6 +206,7 @@ const Login = () => {
                 setToken(data.token);
                 setRole(data.user.role);
                 setsEmail(data.user.email);
+                setsId(data.user._id);
                 navigate("/home");
             }
         } catch (err) {

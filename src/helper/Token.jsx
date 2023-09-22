@@ -17,4 +17,12 @@ const setsEmail = (email) => {
     localStorage.setItem("email", email);
 }
 
-export { setToken, getToken, setRole, getRole,setsEmail };
+let setsId = (id) => {
+    localStorage.setItem("id", id);
+}
+
+let getsId = () => {
+    return localStorage.getItem("id");
+}
+
+export { setToken, getToken, setRole, getRole,setsEmail,setsId,getsId};

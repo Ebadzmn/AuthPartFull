@@ -235,6 +235,7 @@ import React, { useEffect, useState } from 'react';
 
 import axios from 'axios';
 import {getToken,getRole} from "../helper/Token.jsx";
+import {useNavigate} from "react-router-dom";
 
 const PostCreate = () => {
 
@@ -242,6 +243,7 @@ const PostCreate = () => {
     const [price, setPrice] = useState('');
     const [category, setCategory] = useState(''); // Initialize as an empty string
     const [categories, setCategories] = useState([]); // Initialize as an empty array
+    const navigate = useNavigate();
 
     const token = getToken();
     const role = getRole();
@@ -347,6 +349,7 @@ const PostCreate = () => {
                 </form>
                 <h1>Do you want to logout?</h1>
                 <button onClick={logout}>Logout</button>
+                 <button onClick={()=> navigate('/postList')}>PostList</button>
             </div>
         );
     }
